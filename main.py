@@ -1,12 +1,16 @@
 from utils import *
+from constants import INVALID_COMMAND
 
-close_commands = ["close", "exit", "bye", "stop"]
+close_commands = ["close", "exit", "stop"]
 
 def main():
     contacts=read_contacts()
+    if not contacts:
+        print(show_command_list())
+
 
     while True:
-        user_input = input("---> Enter a command: ")
+        user_input = input("---> Enter a command: >>> ")
         command, *args = parse_input(user_input)
 
         if command in close_commands:
@@ -31,9 +35,12 @@ def main():
         
         elif command == "help":
             print(show_command_list())
+        
+        elif command == "delete":
+            print(delete_contact(args, contacts))
 
         else:
-            print("Invalid command. Type 'help' to get the list of valid commands. ")
+            print(INVALID_COMMAND)
 
 if __name__=="__main__":
     main()

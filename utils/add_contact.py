@@ -1,15 +1,19 @@
+from constants import *
+
 def add_contact(args, contacts):
     try:
         name, phone = args
         if name in contacts:
-            user_input=input(f"There is already contact with the name {name}. Would you like to update it? yes/no ==> ")
-            if user_input=="yes":
+            user_input=input(f"Contact {name} already exists. Would you like to update it?{YES_NO_CHOICE}")
+            user_input=user_input.strip().lower()
+            
+            if user_input==YES_CHOICE:
                 contacts[name] = phone
                 return f"Contact {name} was updated."
-            elif user_input=="no":
-                return "Aborted"
+            elif user_input==NO_CHOICE:
+                return ABORTED
             else:
-                return "Invalid command."
+                return INVALID_COMMAND
         else:
             contacts[name] = phone
             return f"Contact {name} was added."

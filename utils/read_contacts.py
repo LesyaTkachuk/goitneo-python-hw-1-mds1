@@ -1,3 +1,5 @@
+from constants import EMPTY_PHONEBOOK
+
 def read_contacts():
     contacts={}
     try:
@@ -7,8 +9,8 @@ def read_contacts():
                 splitted_contact=contact.split()
                 contacts[splitted_contact[0].rstrip(':')]=splitted_contact[1].rstrip('\n')
     except FileNotFoundError:
-        pass
+        print(EMPTY_PHONEBOOK)
     except:
-        print("There was an error while reading contacts.txt file") 
+        print("There was an error while reading the phonebook") 
 
     return contacts
