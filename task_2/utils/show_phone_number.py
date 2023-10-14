@@ -1,6 +1,6 @@
 def show_phone_number(args, contacts):
     try:
-        name=args[0]
+        name = args[0]
         if name in contacts:
             return f"{name}'s phone number is {contacts[name]}"
         else:

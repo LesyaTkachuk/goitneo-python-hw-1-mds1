@@ -1,3 +1,4 @@
+from utils.greet_user import greet_user
 from utils.add_contact import add_contact
 from utils.change_contact import change_contact
 from utils.close_assistant import close_assistant
@@ -8,4 +9,15 @@ from utils.show_command_list import show_command_list
 from utils.show_phone_number import show_phone_number
 from utils.delete_contact import delete_contact
 
-__all__=['add_contact', 'change_contact', 'close_assistant', 'parse_input','read_contacts', 'show_all_contacts', 'show_command_list', 'show_phone_number', 'delete_contact']
+__all__ = [
+    "greet_user",
+    "add_contact",
+    "change_contact",
+    "close_assistant",
+    "parse_input",
+    "read_contacts",
+    "show_all_contacts",
+    "show_command_list",
+    "show_phone_number",
+    "delete_contact",
+]
