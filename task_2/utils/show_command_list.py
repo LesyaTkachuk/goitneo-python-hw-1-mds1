@@ -1,4 +1,4 @@
-def show_command_list():
+def show_command_list(*args, **kwargs):
     return """
     *****************************
     add <name> <phone>      --> to add a contact with the provided phone number to the phonebook

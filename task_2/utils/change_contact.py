@@ -1,7 +1,7 @@
 from constants import YES_CHOICE, NO_CHOICE, ABORTED, INVALID_COMMAND, YES_NO_CHOICE
 
 
-def change_contact(args, contacts):
+def change_contact(*args, contacts):
     try:
         name, phone = args
         if name not in contacts:

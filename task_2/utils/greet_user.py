@@ -1,2 +1,2 @@
-def greet_user():
+def greet_user(*args):
     return "Hello! How can I help you?"

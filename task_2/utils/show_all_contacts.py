@@ -1,7 +1,7 @@
 from constants import EMPTY_PHONEBOOK
 
 
-def show_all_contacts(contacts):
+def show_all_contacts(*args, contacts):
     if not len(contacts):
         return EMPTY_PHONEBOOK
     contacts_list = list()

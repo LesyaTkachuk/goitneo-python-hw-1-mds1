@@ -1,7 +1,7 @@
 from constants import YES_CHOICE, NO_CHOICE, YES_NO_CHOICE, ABORTED, INVALID_COMMAND
 
 
-def add_contact(args, contacts):
+def add_contact(*args, contacts):
     try:
         name, phone = args
         if name in contacts:
