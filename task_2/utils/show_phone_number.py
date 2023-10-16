@@ -1,4 +1,4 @@
-def show_phone_number(args, contacts):
+def show_phone_number(*args, contacts):
     try:
         name = args[0]
         if name in contacts:

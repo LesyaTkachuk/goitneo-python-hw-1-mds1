@@ -1,7 +1,7 @@
 from constants import YES_CHOICE, NO_CHOICE, YES_NO_CHOICE, ABORTED, INVALID_COMMAND
 
 
-def delete_contact(args, contacts):
+def delete_contact(*args, contacts):
     try:
         name = args[0]
         user_input = input(

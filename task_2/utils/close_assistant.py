@@ -1,4 +1,4 @@
-def close_assistant(contacts):
+def close_assistant(*args, contacts):
     if contacts:
         contact_list = list()
         for key, value in contacts.items():
